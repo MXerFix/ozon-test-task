@@ -37,20 +37,29 @@ window.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.progress-bar_wrapper').classList.toggle('progress-bar_wrapper__hidden')
       }
       if (item.classList.contains('animate_tumbler')) {
-        document.querySelectorAll('.rotates').forEach((item) => {
-          item.classList.add('track-non_animated')
-          
-          setTimeout(() => {
-            if (item.classList.contains('rotate-1')) {
-              setTimeout(() => {
-                item.classList.remove('track-non_animated')
-              }, 300);
-            } else item.classList.remove('track-non_animated')
-          }, 10);
-        })
+        if (!item.classList.contains('animate-tumbler_active')) {
+          console.log('added')
+          item.classList.add('animate-tumbler_active')
+          document.querySelectorAll('.rotates').forEach((item) => {
+            item.classList.add('track-non_animated')
+            setTimeout(() => {
+              if (item.classList.contains('rotate-1')) {
+                setTimeout(() => {
+                  item.classList.remove('track-non_animated')
+                }, 300);
+              } else item.classList.remove('track-non_animated')
+            }, 10);
+          })
+        }
+        else if (item.classList.contains('animate-tumbler_active')) {
+          item.classList.remove('animate-tumbler_active')
+          console.log('deleted')
+        }
       }
     })
   })
   
 
 });
+
+
