@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="progress__wrapper">
+    <span>Progress</span>
+    <div class="progress-bar_wrapper">
+      <div class="progress-bar">
+          <div class="progress-bar-active-track-top">
+            <div class="rotates rotate-1"></div>
+          </div>
+          <div class="progress-bar-active-track-bottom">
+            <div class="rotates rotate-2"></div>
+          </div>
+        <div class="progress-bar-track">
+        </div>
+      </div>
+    </div>
+    <div class="progress-tumblers_wrapper">
+      <div class="progress-tumblers_box">
+        <div class="progress-value">
+          <input id="progress-value_input" class="progress-value_input" type="number" max="100">
+          <label class="tumblers_label" for="progress-value_input">Value</label>
+        </div>
+        <div class="progress-tumbler">
+          <div id="animate_tumbler" class="progress-tumbler_box animate_tumbler">
+          </div>
+          <label class="tumblers_label" for="animate_tumbler">Animate</label>
+        </div>
+        <div class="progress-tumbler">
+          <div id="hide_tumbler" class="progress-tumbler_box hide_tumbler">
+          </div>
+          <label class="tumblers_label" for="hide_tumbler">Hide</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
