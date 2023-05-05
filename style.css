@@ -155,6 +155,10 @@ body {
   text-align: center;
 }
 
+.progress-value_input::-webkit-inner-spin-button, .progress-value_input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 .progress-tumbler {
   margin-bottom: 10px;
   display: flex;
